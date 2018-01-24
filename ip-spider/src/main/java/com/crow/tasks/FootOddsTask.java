@@ -72,6 +72,7 @@ public class FootOddsTask {
                 footData.setName(one);
                 footData.setWinData(winStr.deleteCharAt(winStr.length() - 1).toString());
                 footData.setType(findType(footOddsList.get(0).getWin()));
+                footData.setFootName(footOddsList.get(0).getName());
                 footDataMapper.insert(footData);
             }
 

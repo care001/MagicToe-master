@@ -21,6 +21,8 @@ public class FootData implements Serializable {
 
     private Date createTime;
 
+    private String footName;
+
     public Long getId() {
         return id;
     }
@@ -83,5 +85,13 @@ public class FootData implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public String getFootName() {
+        return footName;
+    }
+
+    public void setFootName(String footName) {
+        this.footName = footName;
     }
 }

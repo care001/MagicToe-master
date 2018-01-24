@@ -21,7 +21,7 @@ public class FootOdds implements Serializable {
 
     private Date matchTime;
 
-    private Date CreateTime;
+    private Date createTime;
 
     public Long getId() {
         return id;
@@ -88,10 +88,10 @@ public class FootOdds implements Serializable {
     }
 
     public Date getCreateTime() {
-        return CreateTime;
+        return createTime;
     }
 
     public void setCreateTime(Date createTime) {
-        CreateTime = createTime;
+        this.createTime = createTime;
     }
 }

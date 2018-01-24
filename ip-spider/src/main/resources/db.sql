@@ -18,8 +18,8 @@ CREATE TABLE `foot_odds` (
   `flat` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `loss` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `screen` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '场次',
-  `time` TIMESTAMP ,
-  `create` TIMESTAMP COMMENT '创建时间',
+  `matchTime` TIMESTAMP ,
+  `createTime` TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -33,6 +33,7 @@ CREATE TABLE `foot_data` (
   `lossData` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `result` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '结果',
   `type` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '类型',
-  `create` TIMESTAMP COMMENT '创建时间',
+  `createTime` TIMESTAMP COMMENT '创建时间',
+  `footName` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '结果',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
