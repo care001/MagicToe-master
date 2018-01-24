@@ -1,6 +1,7 @@
 package com.crow.webmagic.pageprocessor;
 
 import com.crow.domain.FootOdds;
+import com.crow.utils.DateUtil;
 import com.crow.utils.UserAgentUtil;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
@@ -42,12 +43,12 @@ public class FootOddsProcessor implements PageProcessor {
                 }
                 footOdds.setScreen(html.xpath("//label/text()").toString());
                 footOdds.setName(aText.get(0));
-                footOdds.setTime(data[1]+" "+data[2]);
+                footOdds.setMatchTime(DateUtil.getDateFromString(data[1]+" "+data[2]));
                 footOdds.setVs(aText.get(1)+"VS"+aText.get(2));
                 footOdds.setWin(data[7]);
                 footOdds.setFlat(data[8]);
                 footOdds.setLoss(data[9]);
-                footOdds.setCreate(new Date());
+                footOdds.setCreateTime(new Date());
                 result.add(footOdds);
             }
         }

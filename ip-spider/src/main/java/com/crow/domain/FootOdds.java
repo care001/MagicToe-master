@@ -19,9 +19,9 @@ public class FootOdds implements Serializable {
 
     private String screen;
 
-    private String time;
+    private Date matchTime;
 
-    private Date create;
+    private Date CreateTime;
 
     public Long getId() {
         return id;
@@ -79,19 +79,19 @@ public class FootOdds implements Serializable {
         this.screen = screen;
     }
 
-    public String getTime() {
-        return time;
+    public Date getMatchTime() {
+        return matchTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setMatchTime(Date matchTime) {
+        this.matchTime = matchTime;
     }
 
-    public Date getCreate() {
-        return create;
+    public Date getCreateTime() {
+        return CreateTime;
     }
 
-    public void setCreate(Date create) {
-        this.create = create;
+    public void setCreateTime(Date createTime) {
+        CreateTime = createTime;
     }
 }

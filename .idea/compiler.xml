@@ -12,9 +12,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="data-analysis" target="1.8" />
-      <module name="hupu-spider" target="1.8" />
-      <module name="ip-spider" target="1.8" />
+      <module name="data-analysis" target="1.7" />
+      <module name="hupu-spider" target="1.7" />
+      <module name="ip-spider" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
