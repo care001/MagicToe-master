@@ -3,6 +3,7 @@ package com.crow.web;
 import com.crow.domain.FootOdds;
 import com.crow.domain.FootOddsMapper;
 import com.crow.webmagic.pageprocessor.FootOddsProcessor;
+import com.crow.webmagic.pageprocessor.FootOverProcessor;
 import com.crow.webmagic.pageprocessor.ProxyPoolProcessor1;
 import com.crow.webmagic.pageprocessor.ProxyPoolProcessor2;
 import com.crow.webmagic.pipeline.FootOddsPipeline;
@@ -51,6 +52,18 @@ public class StartUpController {
 
         Spider.create(new FootOddsProcessor())
                 .addUrl("http://odds.500.com/")
+                //.addUrl("http://blog.sina.com.cn/s/articlelist_1487828712_0_1.html")
+                .addPipeline(footOddsPipeline)
+                .thread(4)
+                .run();
+        return "foot爬虫开启";
+    }
+
+    @GetMapping("/footDatas")
+    public String footDatas() {
+
+        Spider.create(new FootOverProcessor())
+                .addUrl("http://live.500.com/")
                 //.addUrl("http://blog.sina.com.cn/s/articlelist_1487828712_0_1.html")
                 .addPipeline(footOddsPipeline)
                 .thread(4)

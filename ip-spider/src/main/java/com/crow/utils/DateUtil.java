@@ -3,10 +3,7 @@ package com.crow.utils;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class DateUtil {
 
@@ -73,19 +70,24 @@ public class DateUtil {
         return out;
     }
 
+
+    /**
+     * 获取昨天某点的时间
+     * 01-23:20:30
+     * @return
+     */
+    public static List<String> getAllWant(String week, int last) {
+        List<String> out = new ArrayList<>();
+        for (int i=1; i<=last; i++){
+            String oneOut = String.valueOf(1000+i);
+            out.add(week+oneOut.substring(1, oneOut.length()));
+        }
+        return out;
+    }
+
     public static void main(String[] args) {
 
 
-        BigDecimal oneBig = new BigDecimal(3.15);
-        BigDecimal nextOneBig = new BigDecimal(3.30);
-        int data = nextOneBig.subtract(oneBig).multiply(new BigDecimal(100)).intValue();
-        data = data/2;
-        if(data<-9){
-            data = -9;
-        }else if(data>9){
-            data = 9;
-        }
-       System.out.print(String.valueOf(data));
-
     }
+
 }

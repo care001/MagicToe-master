@@ -37,3 +37,16 @@ CREATE TABLE `foot_data` (
   `footName` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '结果',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+CREATE TABLE `foot_result` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `footName` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `info` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `chance` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `result` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '结果',
+  `type` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '类型',
+  `createTime` TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
